@@ -1,5 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
 import ReactDom from 'react-dom'
 import {Layout} from 'antd'
 import SiderCustom from './components/SiderCustom'
@@ -50,6 +49,3 @@ export default class App extends React.Component {
     )
   }
 }
-=======
-import ReactDom from 'react-dom'
->>>>>>> parent of e7a4044... login-module
