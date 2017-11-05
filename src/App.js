@@ -29,13 +29,16 @@ export default class App extends React.Component {
     this.setState({
       collapsed: !this.state.collapsed
     })
-    console.log('collapsed', this.state.collapsed)
+  }
+
+  constructor(props) {
+    super(props)
   }
 
   render() {
     return (
-      <Layout className="ant-layout-has-sider">
-        <SiderCustom collapsed={this.state.collapsed}/>
+      <Layout class="ant-layout-has-sider">
+        <SiderCustom/>
         <Layout>
           <HeaderCustom toggle={this.toggle} collapsed={this.state.collapsed}/>
           <Content style={{margin: '0 16px', overflow: 'initial'}}>

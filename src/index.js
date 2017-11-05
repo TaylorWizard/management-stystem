@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import router from './routes/index'
 import {AppContainer} from 'react-hot-loader'
-import registerServiceWorkder from './registerServiceWorker'
 import './index.css'
 
 const render = Component => {
@@ -25,6 +24,6 @@ if (module.hot) {
     render(router)
   })
 }
-registerServiceWorkder()
+
 
 
