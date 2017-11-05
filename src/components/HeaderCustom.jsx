@@ -31,7 +31,7 @@ export default class HeaderCustom extends React.Component {
       <Header style={{background: '#fff', padding: 0}}>
         <Icon
           className="trigger"
-          type={this.state.collapsed ?  'menu-unfold' : 'menu-fold'}
+          type={this.props.collapsed ?  'menu-unfold' : 'menu-fold'}
           onClick={this.props.toggle}/>
       </Header>
     )

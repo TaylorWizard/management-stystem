@@ -1,12 +1,14 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import {Layout} from 'antd'
+import { connect } from 'react-redux'
 import SiderCustom from './components/SiderCustom'
 import HeaderCustom from './components/HeaderCustom'
+import {addTodo, completeTodo} from "./actions/index"
 
 const {Content, Footer} = Layout
 
-export default class App extends React.Component {
+class App extends React.Component {
   state = {
     collapsed: false
   }
@@ -31,16 +33,13 @@ export default class App extends React.Component {
     })
   }
 
-  constructor(props) {
-    super(props)
-  }
-
   render() {
+    const { dispatch } = this.props
     return (
-      <Layout class="ant-layout-has-sider">
-        <SiderCustom/>
+      <Layout className="ant-layout-has-sider">
+        <SiderCustom collapsed={this.state.collapsed}/>
         <Layout>
-          <HeaderCustom toggle={this.toggle} collapsed={this.state.collapsed}/>
+          <HeaderCustom toggle={this.toggle} collapsed={this.state.collapsed} />
           <Content style={{margin: '0 16px', overflow: 'initial'}}>
             {this.props.children}
           </Content>
@@ -52,3 +51,5 @@ export default class App extends React.Component {
     )
   }
 }
+
+export default connect()(App)
