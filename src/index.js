@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+<<<<<<< HEAD
 import router from './routes/index'
 import {AppContainer} from 'react-hot-loader'
 import registerServiceWorkder from './registerServiceWorker'
@@ -28,3 +29,13 @@ if (module.hot) {
 registerServiceWorkder()
 
 
+=======
+import './index.css'
+
+ReactDOM.render(
+  <div>
+    <h1>management system</h1>
+  </div>,
+  document.getElementById('root')
+)
+>>>>>>> parent of e7a4044... login-module
